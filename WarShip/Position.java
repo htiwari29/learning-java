@@ -5,6 +5,36 @@ public class Position {
     Coordinate secondCoordinate = new Coordinate();
     Coordinate thirdCoordinate = new Coordinate();
 
+    public Boolean findCoordinate(int x, int y){
+        if (firstCoordinate.getXCoordinate() == x && firstCoordinate.getYCoordinate() == y){
+            return true;
+        }
+        else if (secondCoordinate.getXCoordinate() == x && secondCoordinate.getYCoordinate() == y){
+            return true;
+        }
+        else if (thirdCoordinate.getXCoordinate() == x && thirdCoordinate.getYCoordinate() == y){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public void deleteCoordinate(int x, int y){
+        if (firstCoordinate.getXCoordinate() == x && firstCoordinate.getYCoordinate() == y){
+            firstCoordinate.setXCoordinate(-1);
+            firstCoordinate.setYCoordinate(-1);
+        }
+        else if (secondCoordinate.getXCoordinate() == x && secondCoordinate.getYCoordinate() == y){
+            secondCoordinate.setXCoordinate(-1);
+            secondCoordinate.setYCoordinate(-1);
+        }
+        else{
+            thirdCoordinate.setXCoordinate(-1);
+            thirdCoordinate.setYCoordinate(-1);
+        }
+        return;
+    }
 
     public void setCoordinates(int val){
         Random random = new Random();
@@ -29,15 +59,6 @@ public class Position {
             thirdCoordinate.setXCoordinate(x);
             thirdCoordinate.setYCoordinate(y+1);
         }
-    }
-    public Coordinate getFirstCoordinate(){
-        return firstCoordinate;
-    }
-    public Coordinate getSecondCoordinate(){
-        return secondCoordinate;
-    }
-    public Coordinate getThirdCoordinate(){
-        return thirdCoordinate;
     }
 }
 
