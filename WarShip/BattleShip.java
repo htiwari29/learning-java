@@ -43,8 +43,8 @@ public class BattleShip {
         Random random = new Random();
         char fLetter = (char)(random.nextInt(91-65) + 65);
         char sLetter = (char)(random.nextInt(123-97) + 97);
-        int tLetter = random.nextInt(10);
-        int foLetter = random.nextInt(8);
+        char tLetter = (char)(random.nextInt(123-97) + 97);
+        char foLetter = (char)(random.nextInt(123-97) + 97);
         name = Character.toString(fLetter) + Character.toString(sLetter) + Character.toString(tLetter) + Character.toString(foLetter);
         return;
     }
