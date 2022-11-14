@@ -1,18 +1,7 @@
 import java.util.*;  
 
 
-public class GameLauncher {
-    public static void main(String[] args){
-        System.out.print("Enter the max number of games: ");
-        Scanner sc = new Scanner(System.in);
-        GuessGame game = new GuessGame(sc.nextInt());
-        game.makeUserSetPlayerName();
-        game.startGame();
-    }
-}
-
-
-class GuessGame {
+public class GuessGame {
     Player p1 = new Player();
     Player p2 = new Player();
     Player p3 = new Player();
