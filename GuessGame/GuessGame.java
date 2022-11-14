@@ -66,7 +66,7 @@ public class GuessGame {
     }
 
     public void startGame(){
-        Random random = new Random();
+        // Random random = new Random();
         while (this.numberOfGames > 0){
             playAGame();
             --this.numberOfGames;
@@ -91,6 +91,7 @@ public class GuessGame {
     public void setPlayerName(Player p){
         Scanner sc = new Scanner(System.in);
         p.setName(sc.nextLine());
+        sc.close();
     }
 
     public String getPlayerName(Player p){
@@ -122,6 +123,8 @@ class Player {
 
     public int guessNumber(){
         Scanner sc = new Scanner(System.in);
-        return sc.nextInt();
+        int guess = sc.nextInt();
+        sc.close();
+        return guess;
     }
 }
