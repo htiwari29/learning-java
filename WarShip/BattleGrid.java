@@ -19,6 +19,7 @@ public class BattleGrid {
         int x = sc.nextInt();
         System.out.print("Enter Y coordinate: ");
         int y = sc.nextInt();
+        sc.close();
         // check every BattleShip for x, y
         checkBattleships(x, y);
         ++score;
@@ -78,6 +79,7 @@ public class BattleGrid {
         System.out.print("Enter number of Missiles you want (INTEGER) greater than " + numberOfBattleship * 3 + " : ");
         Scanner sc = new Scanner(System.in);
         numberOfLives = sc.nextInt();
+        sc.close();
         startPlaying();
         return;
     }
@@ -86,6 +88,7 @@ public class BattleGrid {
         System.out.print("Enter the battle grid size (INTEGER) greater than 5: ");
         Scanner sc = new Scanner(System.in);
         gridSize = sc.nextInt();
+        sc.close();
         setNumberOfBattleShip();
         return;
     }
@@ -94,6 +97,7 @@ public class BattleGrid {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter enemy battleship count (INTEGER) less than " + gridSize + " : ");
         int x = sc.nextInt();
+        sc.close();
         if (x < 1 || x > gridSize){
             x = 1;
         }
