@@ -6,7 +6,6 @@ public class GameLauncher {
         System.out.print("Enter the max number of games: ");
         Scanner sc = new Scanner(System.in);
         GuessGame game = new GuessGame(sc.nextInt());
-        System.out.println("-------------------------------");
         game.makeUserSetPlayerName();
         game.startGame();
     }
